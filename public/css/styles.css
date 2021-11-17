@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap");
+
+body {
+  color: #fff;
+  font-family: "Dosis", sans-serif;
+  margin: 0; 
+}
+.video-container {
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+}
+
+.App {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  text-align: center;
+
+  /* background: linear-gradient(
+    0deg,
+    rgba(49, 49, 177, 1) 0%,
+    rgba(49, 49, 177, 1) 50%,
+    rgba(49, 49, 177, 0.6) 100%
+  ); */
+}
+.counter-contant {
+  width: 100%;
+  position: absolute;
+  height: 100%;
+  background-image: url(../files/bg.jpg);
+  background-position: top top;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  margin: 15% auto;
+}
+.col-4 {
+  width: 25%;
+  float: left;
+}
+
+h1 {
+  font-size: 38px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 1100px;
+  }
+  h1 {
+    font-size: 58px;
+  }
+}
+ 
+
+.fade-in {
+	animation: fadeIn 2s;
+  	opacity: 1;
+}
+
+@keyframes fadeIn {
+  from {
+  	opacity: 0;
+  }
+  to {
+ 	opacity: 1;
+  }
+}
