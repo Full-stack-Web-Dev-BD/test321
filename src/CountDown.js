@@ -47,21 +47,18 @@
 
 import React from 'react'
 
-
 const CountDown = () => {
   const videoLoaded = () => {
     console.log("video is loaded ")
     var videoElement = document.getElementById("video")
-
-    if (videoElement.readyState >= 3) {
-      console.log("object done")
-      videoElement.play()
-      console.log('video should play ')
-    }
+    console.log(videoElement.readyState)
   }
   return (
     <div>
       <video
+        preload
+        autoPlay
+        controls
         onLoadedData={e => videoLoaded()}
         poster="img/videoframe.jpg"
         id="video"
