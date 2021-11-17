@@ -47,6 +47,7 @@
 
 import React from 'react'
 
+
 const CountDown = () => {
   const videoLoaded = () => {
     console.log("video is loaded ")
@@ -55,6 +56,7 @@ const CountDown = () => {
     if (videoElement.readyState >= 3) {
       console.log("object done")
       videoElement.play()
+      console.log('video should play ')
     }
   }
   return (
