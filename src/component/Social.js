@@ -5,10 +5,10 @@ const Social = () => {
   return (
     <div>
       <div className="optin">
-        <a href="/signup"> <img src="/files/signup.png" style={{ height: '40px', borderRadius: '12px', marginRight: '10px' }} />
+        <a href="/signup"> <img alt="img" src="/files/signup.png" style={{ height: '40px', borderRadius: '12px', marginRight: '10px' }} />
         </a>
         <a href="/login">
-          <img src="/files/login.png" style={{ height: '40px', borderRadius: '12px' }} />
+          <img alt="img" src="/files/login.png" style={{ height: '40px', borderRadius: '12px' }} />
         </a>
       </div>
       <div className="mt-4" style={{ marginTop: '20px' }}>

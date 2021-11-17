@@ -34,7 +34,7 @@ const CountDown = () => {
       <div className=" counter-contant " id="timer-content">
         <div className="container">
           <h1>
-            <img style={{ width: '80%' }} src="/files/title.png" />
+            <img alt="img" style={{ width: '80%' }} src="/files/title.png" />
           </h1>
           <Timer />
           <Social />
