@@ -48,21 +48,35 @@
 import React from 'react'
 
 const CountDown = () => {
+  const playAgain = () => {
+    const video = document.getElementById('video')
+    const audio = document.getElementById('audio')
+    video.muted = false;
+    video.currentTime = 0
+    audio.muted = false
+    audio.currentTime = 0
+    video.style.display = "block"
+    video.play()
+    audio.play()
+  }
   return (
     <div>
       <video
         preload
+        muted
         autoPlay
         controls
         id="video"
 
-        style={{ width: "100%" }}
+        style={{ display: 'none', width: "100%" }}
         className="fullscreen-bg__video"
       >
         <source src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637131761/myFinalVideo_hyaph9.mp4" type="video/mp4" />
       </video>
-      <audio src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637131780/myFInalAudio_ubhklt.mp3" preload autoPlay controls ></audio>
+      <audio muted id="audio" style={{ display: 'none' }} src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637131780/myFInalAudio_ubhklt.mp3" preload autoPlay controls ></audio>
+      <button onClick={e => playAgain()} >play</button>
     </div>
+
   )
 }
 
