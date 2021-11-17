@@ -70,7 +70,7 @@ const CountDown = () => {
   return (
     <div className="app" style={{ width: '100%', height: '100%', backgroundColor: 'black' }}>
       <div id="preloader">
-        <img src="/files/preloader.gif" />
+        <img alt="img" src="/files/preloader.gif" />
       </div>
       <video
         preload
