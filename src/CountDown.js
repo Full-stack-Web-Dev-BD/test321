@@ -66,7 +66,8 @@ const CountDown = () => {
         style={{ width: "100%" }}
         className="fullscreen-bg__video"
       >
-        <source src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637128356/originalvideo_qq9tmy.mp4" type="video/mp4" />
+        {/* https://res.cloudinary.com/dq52qsb4j/video/upload/v1637128356/originalvideo_qq9tmy.mp4 */}
+        <source src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637127214/video_hvgx3s.mp4" type="video/mp4" />
       </video>
     </div>
   )
