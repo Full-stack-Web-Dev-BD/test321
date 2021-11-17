@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import Social from "./component/Social";
 import Timer from "./component/Timer";
-import video from "./video.mp4";
 const CountDown = () => {
   useEffect(() => {
     var timerContent = document.getElementById('timer-content')
@@ -28,7 +27,7 @@ const CountDown = () => {
           style={{ width: "100%" }}
           className="fullscreen-bg__video"
         >
-          <source src={video} type="video/mp4" />
+          <source src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637127214/video_hvgx3s.mp4" type="video/mp4" />
         </video>
       </div>
       <div className=" counter-contant " id="timer-content">
