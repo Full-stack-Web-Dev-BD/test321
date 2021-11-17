@@ -65,7 +65,7 @@ const CountDown = () => {
           </div>
           : (
             <div>
-              <video onEnded={e => alert('ended')} preload autoPlay controls id="video" style={{ width: "100%" }} src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637127214/video_hvgx3s.mp4"></video>
+              <video onEnded={e => alert('ended')} preload autoPlay controls id="video" style={{ width: "100%" }} src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637137645/vwitha_kzydfk.mp4"></video>
             </div>
           )
       }
