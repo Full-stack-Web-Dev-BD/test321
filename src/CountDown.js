@@ -45,44 +45,42 @@
 
 // export default CountDown;
 
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 
 const CountDown = () => {
-  useEffect(() => {
-    const video = document.getElementById('video')
-    const audio = document.getElementById('audio')
-    const preloader = document.getElementById('preloader');
+  const [gif, setGif] = useState(true)
 
+  useEffect(() => {
     setTimeout(() => {
-      video.muted = false;
-      video.currentTime = 0
-      audio.muted = false
-      audio.currentTime = 0
-      video.style.display = "block"
-      preloader.style.display = "none"
-      // video.currentTime()
-      // audio.play()
+      setGif(false)
     }, 6000);
   }, [])
   return (
     <div className="app" style={{ width: '100%', height: '100%', backgroundColor: 'black' }}>
-      <div id="preloader">
-        <img alt="img" src="/files/preloader.gif" />
-      </div>
-      <video
-        preload
-        muted
-        autoPlay
-        controls
-        id="video"
+      {
+        gif ?
+          <div id="preloader">
+            <img alt="img" src="/files/preloader.gif" />
+          </div>
+          : (
+            <div>
+              <video
+                preload
+                muted
+                autoPlay
+                controls
+                id="video"
 
-        style={{ width: "100%" }}
-        className="fullscreen-bg__video"
-      >
-        <source src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637131761/myFinalVideo_hyaph9.mp4" type="video/mp4" />
-      </video>
-      <audio id="audio" style={{ display: 'none' }} src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637131780/myFInalAudio_ubhklt.mp3" preload autoPlay controls ></audio>
+                style={{ width: "100%" }}
+                className="fullscreen-bg__video"
+              >
+                <source src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637131761/myFinalVideo_hyaph9.mp4" type="video/mp4" />
+              </video>
+              <audio id="audio" src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637131780/myFInalAudio_ubhklt.mp3" preload autoPlay controls ></audio>
+            </div>
+          )
+      }
     </div>
 
   )
