@@ -49,7 +49,7 @@ import React, { useEffect } from 'react'
 
 const CountDown = () => {
   useEffect(() => {
-    var video = document.getElementById("video")
+    // var video = document.getElementById("video")
   }, [])
   const videoLoaded = () => {
     console.log("video is loaded ")
