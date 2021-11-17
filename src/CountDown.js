@@ -59,16 +59,14 @@ const CountDown = () => {
         preload
         autoPlay
         controls
-        onLoadedData={e => videoLoaded()}
-        poster="img/videoframe.jpg"
         id="video"
 
         style={{ width: "100%" }}
         className="fullscreen-bg__video"
       >
-        {/* https://res.cloudinary.com/dq52qsb4j/video/upload/v1637128356/originalvideo_qq9tmy.mp4 */}
-        <source src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637127214/video_hvgx3s.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637131761/myFinalVideo_hyaph9.mp4" type="video/mp4" />
       </video>
+      <audio src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637131780/myFInalAudio_ubhklt.mp3" preload autoPlay controls ></audio>
     </div>
   )
 }
