@@ -48,11 +48,6 @@
 import React from 'react'
 
 const CountDown = () => {
-  const videoLoaded = () => {
-    console.log("video is loaded ")
-    var videoElement = document.getElementById("video")
-    console.log(videoElement.readyState)
-  }
   return (
     <div>
       <video
