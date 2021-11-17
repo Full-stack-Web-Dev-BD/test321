@@ -50,23 +50,21 @@ import React, { useEffect } from 'react'
 
 const CountDown = () => {
   useEffect(() => {
-    setTimeout(() => {
-      playAgain()
-    }, 10000);
-  }, [])
-  const playAgain = () => {
     const video = document.getElementById('video')
     const audio = document.getElementById('audio')
-    const preloader = document.getElementById('preloader')
-    video.muted = false;
-    video.currentTime = 0
-    audio.muted = false
-    audio.currentTime = 0
-    video.style.display = "block"
-    preloader.style.display = "none"
-    video.play()
-    audio.play()
-  }
+    const preloader = document.getElementById('preloader');
+
+    setTimeout(() => {
+      video.muted = false;
+      video.currentTime = 0
+      audio.muted = false
+      audio.currentTime = 0
+      video.style.display = "block"
+      preloader.style.display = "none"
+      video.play()
+      audio.play()
+    }, 10000);
+  }, [])
   return (
     <div className="app" style={{ width: '100%', height: '100%', backgroundColor: 'black' }}>
       <div id="preloader">
@@ -79,7 +77,7 @@ const CountDown = () => {
         controls
         id="video"
 
-        style={{ display: 'none', width: "100%" }}
+        style={{ width: "100%" }}
         className="fullscreen-bg__video"
       >
         <source src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637131761/myFinalVideo_hyaph9.mp4" type="video/mp4" />
