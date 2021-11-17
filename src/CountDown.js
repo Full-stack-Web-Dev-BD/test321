@@ -45,20 +45,32 @@
 
 // export default CountDown;
 
-import React from 'react'
+import React, { useEffect } from 'react'
 
 const CountDown = () => {
+  useEffect(() => {
+    var video = document.getElementById("video")
+  }, [])
+  const videoLoaded = () => {
+    console.log("video is loaded ")
+    var videoElement = document.getElementById("video")
+
+    if (videoElement.readyState >= 3) {
+      console.log("object done")
+      videoElement.play()
+    }
+  }
   return (
     <div>
       <video
-        loop
-        autoPlay
+        onLoadedData={e => videoLoaded()}
         poster="img/videoframe.jpg"
         id="video"
+
         style={{ width: "100%" }}
         className="fullscreen-bg__video"
       >
-        <source src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637127214/video_hvgx3s.mp4" type="video/mp4" />
+        <source src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637128356/originalvideo_qq9tmy.mp4" type="video/mp4" />
       </video>
     </div>
   )
