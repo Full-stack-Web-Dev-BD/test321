@@ -45,12 +45,9 @@
 
 // export default CountDown;
 
-import React, { useEffect } from 'react'
+import React from 'react'
 
 const CountDown = () => {
-  useEffect(() => {
-    // var video = document.getElementById("video")
-  }, [])
   const videoLoaded = () => {
     console.log("video is loaded ")
     var videoElement = document.getElementById("video")
