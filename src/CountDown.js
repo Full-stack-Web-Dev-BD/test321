@@ -45,22 +45,33 @@
 
 // export default CountDown;
 
-import React from 'react'
+import React, { useEffect } from 'react'
+
 
 const CountDown = () => {
+  useEffect(() => {
+    setTimeout(() => {
+      playAgain()
+    }, 10000);
+  }, [])
   const playAgain = () => {
     const video = document.getElementById('video')
     const audio = document.getElementById('audio')
+    const preloader = document.getElementById('preloader')
     video.muted = false;
     video.currentTime = 0
     audio.muted = false
     audio.currentTime = 0
     video.style.display = "block"
+    preloader.style.display = "none"
     video.play()
     audio.play()
   }
   return (
-    <div>
+    <div className="app" style={{ width: '100%', height: '100%', backgroundColor: 'black' }}>
+      <div id="preloader">
+        <img src="/files/preloader.gif" />
+      </div>
       <video
         preload
         muted
@@ -74,7 +85,6 @@ const CountDown = () => {
         <source src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637131761/myFinalVideo_hyaph9.mp4" type="video/mp4" />
       </video>
       <audio muted id="audio" style={{ display: 'none' }} src="https://res.cloudinary.com/dq52qsb4j/video/upload/v1637131780/myFInalAudio_ubhklt.mp3" preload autoPlay controls ></audio>
-      <button onClick={e => playAgain()} >play</button>
     </div>
 
   )
